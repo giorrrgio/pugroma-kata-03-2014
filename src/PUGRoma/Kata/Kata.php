@@ -8,6 +8,10 @@ class Kata
     {
         return true;
     }
+
+    public function vincoIo()
+    {
+    }
 }
 
 
