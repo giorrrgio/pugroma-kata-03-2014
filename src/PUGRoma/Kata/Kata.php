@@ -9,9 +9,19 @@ class Kata
         return true;
     }
 
-    public function vincoIo()
+    public function vincoIo(array $numbers)
     {
-        return [1,2,'Fizz','Buzz','FizzBuzz','FizzBuzz','Buzz'];
+        foreach ($numbers as $number) {
+            if (!($number % 15)) {
+                yield 'FizzBuzz';
+            } elseif (!($number % 3) ) {
+                yield 'Fizz';
+            } elseif (!($number % 5) ) {
+                yield 'Buzz';
+            } else {
+                yield $number;
+            }
+        }
     }
 }
 

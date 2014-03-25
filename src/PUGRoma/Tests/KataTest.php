@@ -4,8 +4,7 @@ namespace PUGRoma\Kata;
 
 class KataTest extends \PHPUnit_Framework_TestCase
 {
-    protected $numbers  = [1,2,3,5,15,30,35];
-    protected $expected = [1,2,'Fizz','Buzz','FizzBuzz','FizzBuzz','Buzz'];
+    protected $expected = [1,2,'Fizz',4,'Buzz','Fizz',7,8,'Fizz','Buzz',11,'Fizz',13,14, 'FizzBuzz'];
 
     public function testStart()
     {
@@ -17,7 +16,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
     {
         $kata = new Kata();
 
-        $output = $kata->vincoIo($this->numbers);
-        $this->assertEquals($this->expected, $output);
+        $output = $kata->vincoIo(range(1,15));
+        $this->assertEquals(array_values($this->expected), iterator_to_array($output));
     }
 }
