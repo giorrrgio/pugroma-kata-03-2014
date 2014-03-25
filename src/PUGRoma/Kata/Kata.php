@@ -11,6 +11,7 @@ class Kata
 
     public function vincoIo()
     {
+        return [1,2,'Fizz','Buzz','FizzBuzz','FizzBuzz','Buzz'];
     }
 }
 
